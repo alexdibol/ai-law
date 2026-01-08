@@ -1,0 +1,470 @@
+Skip to content
+Navigation Menu
+alexdibol
+ai-law
+
+Type / to search
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+Files
+Go to file
+t
+docs
+index.html
+notebooks
+LICENSE
+README.md
+ai-law/docs
+/index.html
+alexdibol
+alexdibol
+Create index.html for AI LAW project
+a50ecad
+ · 
+7 minutes ago
+
+Code
+
+Blame
+434 lines (383 loc) · 16.3 KB
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Practical Legal Applications of Generative AI (AI LAW)</title>
+  <meta name="description" content="Practical Legal Applications of Generative AI (AI LAW): a governance-first, five-level maturity ladder for U.S. legal practice, with a PDF book and Colab notebooks (Chapters 1–5)." />
+
+  <style>
+    :root{
+      --bg:#07080d;
+      --panel:#0f1220;
+      --panel-2:#141836;
+      --text:#eef0ff;
+      --muted:#b8bddb;
+      --border:rgba(255,255,255,0.09);
+      --accent:#7aa2ff;
+      --accent2:#6ee7c8;
+      --warn:#ffd27a;
+      --shadow:0 18px 60px rgba(0,0,0,0.45);
+    }
+
+    *{box-sizing:border-box;}
+    html,body{height:100%;}
+    body{
+      margin:0;
+      background:
+        radial-gradient(900px 600px at 15% 10%, rgba(122,162,255,0.18), transparent 55%),
+        radial-gradient(800px 600px at 85% 20%, rgba(110,231,200,0.12), transparent 55%),
+        radial-gradient(900px 650px at 60% 95%, rgba(255,210,122,0.07), transparent 55%),
+        var(--bg);
+      color:var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      line-height:1.6;
+    }
+
+    a{color:var(--accent);text-decoration:none;}
+    a:hover{color:var(--accent2);text-decoration:underline;}
+
+    .container{max-width:1140px;margin:0 auto;padding:32px 20px 84px;}
+
+    .hero{
+      padding:38px 34px;
+      border-radius:22px;
+      background:linear-gradient(180deg, rgba(20,24,54,0.92), rgba(15,18,32,0.88));
+      border:1px solid var(--border);
+      box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+    .hero:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(520px 360px at 16% 0%, rgba(122,162,255,0.18), transparent 60%),
+        radial-gradient(460px 330px at 92% 18%, rgba(110,231,200,0.10), transparent 60%),
+        radial-gradient(520px 360px at 55% 110%, rgba(255,210,122,0.08), transparent 60%);
+      pointer-events:none;
+      opacity:0.9;
+    }
+    .hero > *{position:relative;}
+
+    .kicker{
+      text-transform:uppercase;
+      letter-spacing:0.18em;
+      font-size:12px;
+      color:var(--muted);
+    }
+    .hero h1{
+      font-size:38px;
+      margin:12px 0 10px;
+      line-height:1.15;
+      max-width:44ch;
+      text-transform:uppercase;
+      letter-spacing:0.02em;
+    }
+    .subtitle{
+      margin:0;
+      max-width:96ch;
+      color:var(--muted);
+      font-size:16px;
+    }
+    .meta{
+      display:grid;
+      gap:6px;
+      color:var(--muted);
+      font-size:14px;
+      margin:16px 0 0;
+    }
+    .meta strong{color:var(--text);}
+
+    .section{margin-top:56px;}
+    .section h2{
+      font-size:28px;
+      margin:0 0 14px;
+      letter-spacing:-0.02em;
+    }
+    .section p{color:var(--muted);max-width:96ch;margin:10px 0;}
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+      gap:18px;
+      margin-top:22px;
+    }
+    .card{
+      padding:20px 20px;
+      border-radius:18px;
+      background:rgba(20,24,54,0.72);
+      border:1px solid var(--border);
+      box-shadow:0 10px 30px rgba(0,0,0,0.30);
+    }
+    .card h3{
+      margin:0 0 10px;
+      font-size:18px;
+      line-height:1.25;
+    }
+    .card p{
+      margin:0;
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    .linkcard{
+      display:block;
+      cursor:pointer;
+      transition: transform 0.12s ease, border-color 0.12s ease, background 0.12s ease;
+      color:inherit;
+      text-decoration:none;
+    }
+    .linkcard:hover{
+      transform: translateY(-2px);
+      border-color: rgba(122,162,255,0.35);
+      background: rgba(20,24,54,0.86);
+      text-decoration:none;
+    }
+    .linkcard:focus{
+      outline:2px solid rgba(110,231,200,0.46);
+      outline-offset:3px;
+    }
+
+    .hint{
+      margin-top:12px;
+      font-size:12px;
+      color:var(--muted);
+      opacity:0.92;
+      font-weight:700;
+      letter-spacing:0.02em;
+    }
+
+    .callout{
+      margin-top:18px;
+      padding:18px 18px;
+      border-radius:18px;
+      border:1px solid rgba(122,162,255,0.18);
+      background:linear-gradient(135deg, rgba(122,162,255,0.06), rgba(110,231,200,0.04));
+      color:var(--muted);
+      max-width:96ch;
+    }
+    .callout strong{color:var(--text);}
+
+    .badges{
+      margin-top:14px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    .badge{
+      display:inline-block;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,0.10);
+      background:rgba(15,18,32,0.55);
+      color:var(--muted);
+      font-size:12px;
+      letter-spacing:0.02em;
+      font-weight:700;
+    }
+
+    .list{
+      margin-top:18px;
+      padding-left:22px;
+      color:var(--muted);
+      max-width:96ch;
+    }
+    .list li{margin-bottom:12px;}
+    .list strong{color:var(--text);}
+
+    .review{
+      font-size:14px;
+      color:var(--muted);
+    }
+    .review strong{color:var(--text);}
+    .review .stars{color:var(--warn);font-weight:900;letter-spacing:0.08em;}
+
+    .footer{
+      margin-top:80px;
+      padding-top:24px;
+      border-top:1px solid var(--border);
+      color:var(--muted);
+      font-size:13px;
+      text-align:center;
+    }
+
+    .small{font-size:13px;color:var(--muted);max-width:96ch;}
+
+    .mono{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size:12px;
+      color:var(--muted);
+      background:rgba(0,0,0,0.20);
+      border:1px solid rgba(255,255,255,0.08);
+      padding:10px 12px;
+      border-radius:14px;
+      overflow:auto;
+      max-width:96ch;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+
+    <section class="hero">
+      <div class="kicker">Governance-first · U.S. legal practice · PDF + Colab notebooks (Chapters 1–5)</div>
+      <h1>Practical Legal Applications of Generative AI (AI LAW)</h1>
+
+      <p class="subtitle">
+        An educational guide for practicing lawyers that treats generative AI as a tool—not legal authority.
+        The book introduces a five-level maturity ladder and shows, at each level, how capability increases
+        alongside risk, and how controls must scale to preserve professional responsibility.
+      </p>
+
+      <div class="meta">
+        <div><strong>Author:</strong> Alejandro Reynoso</div>
+        <div><strong>Affiliation:</strong> Chief Scientist, DEFI CAPITAL RESEARCH; External Lecturer, Judge Business School Cambridge</div>
+        <div><strong>Repository:</strong> <a href="https://github.com/alexdibol/ai-law" target="_blank" rel="noopener">github.com/alexdibol/ai-law</a></div>
+      </div>
+
+      <div class="badges" aria-label="Key ideas">
+        <span class="badge">No invented authority</span>
+        <span class="badge">Facts vs assumptions</span>
+        <span class="badge">Not verified by default</span>
+        <span class="badge">Human review required</span>
+        <span class="badge">Audit artifacts</span>
+      </div>
+    </section>
+
+    <section class="section" id="downloads">
+      <h2>Download and Run</h2>
+      <p>
+        The book PDF is published as a versioned GitHub Release asset. The companion notebooks live in this repository
+        and open directly in Google Colab.
+      </p>
+
+      <div class="grid">
+        <a class="card linkcard" href="https://github.com/alexdibol/ai-law/releases/download/book-ai-law-v01/AI_LAW.pdf" target="_blank" rel="noopener">
+          <h3>Book PDF</h3>
+          <p>Download the current release edition of the book as a single PDF.</p>
+          <div class="hint">Download PDF →</div>
+        </a>
+
+        <a class="card linkcard" href="https://github.com/alexdibol/ai-law/tree/main/notebooks" target="_blank" rel="noopener">
+          <h3>Notebooks Folder</h3>
+          <p>Browse all chapter notebooks in the repository (chapter_1 … chapter_5).</p>
+          <div class="hint">Open folder →</div>
+        </a>
+
+        <a class="card linkcard" href="https://colab.research.google.com/github/alexdibol/ai-law/blob/main/notebooks/chapter_1.ipynb" target="_blank" rel="noopener">
+          <h3>Start in Colab</h3>
+          <p>Open Chapter 1 in Colab. Each notebook generates governance artifacts and structured deliverables.</p>
+          <div class="hint">Open in Colab →</div>
+        </a>
+      </div>
+
+      <div class="callout">
+        <strong>Colab link pattern:</strong>
+        <div class="mono">https://colab.research.google.com/github/alexdibol/ai-law/blob/main/notebooks/chapter_&lt;N&gt;.ipynb</div>
+      </div>
+    </section>
+
+    <section class="section" id="notebooks">
+      <h2>Chapter Notebooks (Colab)</h2>
+      <p>
+        Each notebook is designed to be executable, auditable, and classroom-ready. The labs produce structured outputs and
+        governance artifacts (run manifest, prompts log, risk log, deliverables bundle) so results are reviewable rather than ephemeral.
+      </p>
+
+      <div class="grid">
+        <a class="card linkcard" href="https://colab.research.google.com/github/alexdibol/ai-law/blob/main/notebooks/chapter_1.ipynb" target="_blank" rel="noopener">
+          <h3>Chapter 1 — Level 1 (Chatbots)</h3>
+          <p>Supervised drafting, client communications, redaction hygiene, and facts-first outputs.</p>
+          <div class="hint">Open in Colab →</div>
+        </a>
+
+        <a class="card linkcard" href="https://colab.research.google.com/github/alexdibol/ai-law/blob/main/notebooks/chapter_2.ipynb" target="_blank" rel="noopener">
+          <h3>Chapter 2 — Level 2 (Reasoners)</h3>
+          <p>Issue spotting, IRAC-style reasoning, structured uncertainty, and verification lists.</p>
+          <div class="hint">Open in Colab →</div>
+        </a>
+
+        <a class="card linkcard" href="https://colab.research.google.com/github/alexdibol/ai-law/blob/main/notebooks/chapter_3.ipynb" target="_blank" rel="noopener">
+          <h3>Chapter 3 — Level 3 (Agents)</h3>
+          <p>Multi-step workflows with human gates, role separation, and robust JSON-only outputs.</p>
+          <div class="hint">Open in Colab →</div>
+        </a>
+
+        <a class="card linkcard" href="https://colab.research.google.com/github/alexdibol/ai-law/blob/main/notebooks/chapter_4.ipynb" target="_blank" rel="noopener">
+          <h3>Chapter 4 — Level 4 (Innovators)</h3>
+          <p>Reusable assets: playbooks, clause libraries, adversarial tests, controlled releases.</p>
+          <div class="hint">Open in Colab →</div>
+        </a>
+
+        <a class="card linkcard" href="https://colab.research.google.com/github/alexdibol/ai-law/blob/main/notebooks/chapter_5.ipynb" target="_blank" rel="noopener">
+          <h3>Chapter 5 — Level 5 (Organizations)</h3>
+          <p>Mini-firm simulation: intake → checks → workflow → QA → sign-off → audit bundle.</p>
+          <div class="hint">Open in Colab →</div>
+        </a>
+      </div>
+
+      <div class="callout">
+        <strong>Important:</strong> Notebooks are educational. Do not paste confidential client information into external prompts.
+        Use redaction and “minimum necessary” inputs by default.
+      </div>
+    </section>
+
+    <section class="section" id="ladder">
+      <h2>The Five-Level Maturity Ladder</h2>
+      <p>
+        The book’s organizing spine is a progression from individual drafting assistance to fully governed, organization-grade operations.
+        The goal is practical defensibility: usefulness that survives supervision, verification, and audit.
+      </p>
+
+      <ul class="list">
+        <li><strong>Level 1 — Chatbots:</strong> supervised drafting and client communication support.</li>
+        <li><strong>Level 2 — Reasoners:</strong> structured issue spotting, IRAC-style analysis, argument mapping.</li>
+        <li><strong>Level 3 — Agents:</strong> multi-step workflows with human gates and reliable structured outputs.</li>
+        <li><strong>Level 4 — Innovators:</strong> reusable assets (playbooks, clause libraries, adversarial test suites) with controlled releases.</li>
+        <li><strong>Level 5 — Organizations:</strong> end-to-end operating model: redacted inputs, prompts/roles, risks flagged, verification tasks, sign-off responsibility, and audit artifacts.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="cases">
+      <h2>Recurring Mini-Cases (Used in Every Chapter)</h2>
+      <p>
+        To keep learning concrete, the ladder is demonstrated through the same four mini-cases across all levels—so readers can isolate how capability,
+        risk, and controls change as the system becomes more powerful.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Criminal</h3>
+          <p>Drafting and review patterns where facts, missing facts, and risk controls must be explicit.</p>
+        </div>
+        <div class="card">
+          <h3>Regulatory / Administrative</h3>
+          <p>Agency-facing and compliance workflows that demand verification, scope control, and defensible logs.</p>
+        </div>
+        <div class="card">
+          <h3>International</h3>
+          <p>Cross-border communication and contract risk framing with clear assumptions and boundary statements.</p>
+        </div>
+        <div class="card">
+          <h3>Teaching / Academia</h3>
+          <p>Policy and instruction artifacts that translate governance concepts into student-facing practice.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="evaluations">
+      <h2>Independent AI Evaluations</h2>
+      <p>
+        Below are summarized evaluations of the package. The shared theme is that the book translates ethical duties into operational habits:
+        structured outputs, verification-first thinking, and audit-ready artifacts—rather than hype or “prompt magic.”
+      </p>
+
+      <div class="grid">
+        <div class="card review">
+          <strong>Claude (Anthropic)</strong> <span class="stars">★★★★★</span><br/>
+          Strongest themes: governance integration with operational notebooks; course-in-a-box structure with assessable artifacts.
+          Suggested improvements: add real-world misuse examples per chapter; include instructor-facing “expected artifacts” guide for grading.
+        </div>
+
+        <div class="card review">
+          <strong>Gemini</strong> <span class="stars">★★★★★</span><br/>
+          Strongest themes: recurring mini-case pedagogy; operationalized governance via mandatory schemas and artifact bundles.
+          Suggested improvements: add model-agnostic guidance; expand policy drafting exercises for client acceptable-use policies.
+        </div>
+      </div>
+
+      <div class="callout">
+        <strong>One-sentence synthesis:</strong>
+        The package earns top marks because it turns abstract duties (confidentiality, supervision, candor, competence) into repeatable workflows
+        with explicit verification and auditable outputs.
+      </div>
+    </section>
+
+    <section class="section" id="disclaimer">
+      <h2>License and Disclaimers</h2>
+
+      <p class="small">
+        <strong>Educational disclaimer:</strong> This material is provided for educational purposes only. It does not constitute legal advice.
+        Human lawyer review is required for any reliance-bearing use. Professional responsibility obligations apply at every step.
+      </p>
+
+      <p class="small">
+        <strong>Confidentiality and privilege hygiene:</strong> Do not paste sensitive client information into external model prompts.
+        Use redaction/anonymization and “minimum necessary” inputs by default. Document any exception.
+      </p>
+
+      <p class="small">
+        <strong>No invented authority:</strong> The workflow assumes a zero-tolerance posture toward fabricated citations, cases, statutes, or rules.
+        If sources are not provided and verified, outputs must remain labeled “Not verified” with a questions-to-verify list.
+      </p>
+
+      <p class="small">
+        <strong>Repository license:</strong> See the repository’s LICENSE file for terms.
+      </p>
+    </section>
+
+    <footer class="footer">
+      © <span id="year"></span> Alejandro Reynoso · Practical Legal Applications of Generative AI (AI LAW)
+      <br/>Hosted on GitHub Pages · Built as governed, executable courseware
+    </footer>
+
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+ai-law/docs/index.html at main · alexdibol/ai-law 
