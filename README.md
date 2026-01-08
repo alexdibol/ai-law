@@ -1,4 +1,4 @@
-#**Practical Legal Applications of Generative AI (AI LAW)**  
+# **Practical Legal Applications of Generative AI (AI LAW)**  
 Alejandro Reynoso — Chief Scientist, DEFI CAPITAL RESEARCH; External Lecturer, Judge Business School Cambridge
 
 ##**What this repository contains**  
