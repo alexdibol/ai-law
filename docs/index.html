@@ -1,3 +1,4 @@
+```html
 <!doctype html>
 <html lang="en">
 <head>
@@ -194,6 +195,19 @@
     .review strong{color:var(--text);}
     .review .stars{color:var(--warn);font-weight:900;letter-spacing:0.08em;}
 
+    .reviewbox{
+      margin-top:18px;
+      padding:18px;
+      border-radius:18px;
+      border:1px solid rgba(255,210,122,0.18);
+      background:linear-gradient(135deg, rgba(255,210,122,0.06), rgba(122,162,255,0.05));
+      color:var(--muted);
+      max-width:96ch;
+    }
+    .reviewbox strong{color:var(--text);}
+    .reviewbox ol{margin:10px 0 0 18px; padding:0;}
+    .reviewbox li{margin:8px 0;}
+
     .footer{
       margin-top:80px;
       padding-top:24px;
@@ -266,12 +280,6 @@
           <p>Browse all chapter notebooks in the repository (chapter_1 … chapter_5).</p>
           <div class="hint">Open folder →</div>
         </a>
-
-        <a class="card linkcard" href="https://colab.research.google.com/github/alexdibol/ai-law/blob/main/notebooks/chapter_1.ipynb" target="_blank" rel="noopener">
-          <h3>Start in Colab</h3>
-          <p>Open Chapter 1 in Colab. Each notebook generates governance artifacts and structured deliverables.</p>
-          <div class="hint">Open in Colab →</div>
-        </a>
       </div>
 
       <div class="callout">
@@ -302,7 +310,7 @@
 
         <a class="card linkcard" href="https://colab.research.google.com/github/alexdibol/ai-law/blob/main/notebooks/chapter_3.ipynb" target="_blank" rel="noopener">
           <h3>Chapter 3 — Level 3 (Agents)</h3>
-          <p>Multi-step workflows with human gates, role separation, and robust JSON-only outputs.</p>
+          <p>Multi-step workflows with human gates, role separation, and reliable structured outputs.</p>
           <div class="hint">Open in Colab →</div>
         </a>
 
@@ -371,28 +379,44 @@
     <section class="section" id="evaluations">
       <h2>Independent AI Evaluations</h2>
       <p>
-        Below are summarized evaluations of the package. The shared theme is that the book translates ethical duties into operational habits:
-        structured outputs, verification-first thinking, and audit-ready artifacts—rather than hype or “prompt magic.”
+        The evaluations below converge on the same theme: the distinctive value is not “prompt tricks,” but a disciplined, assessable learning system
+        where capability increases imply risk increases, and controls must scale accordingly.
       </p>
 
       <div class="grid">
         <div class="card review">
           <strong>Claude (Anthropic)</strong> <span class="stars">★★★★★</span><br/>
           Strongest themes: governance integration with operational notebooks; course-in-a-box structure with assessable artifacts.
-          Suggested improvements: add real-world misuse examples per chapter; include instructor-facing “expected artifacts” guide for grading.
+          Suggested improvements: add real-world misuse examples per chapter; include instructor-facing “expected artifacts” guides.
         </div>
 
         <div class="card review">
           <strong>Gemini</strong> <span class="stars">★★★★★</span><br/>
           Strongest themes: recurring mini-case pedagogy; operationalized governance via mandatory schemas and artifact bundles.
-          Suggested improvements: add model-agnostic guidance; expand policy drafting exercises for client acceptable-use policies.
+          Suggested improvements: add model-agnostic guidance; expand client-facing acceptable-use policy drafting exercises.
+        </div>
+
+        <div class="card review">
+          <strong>OpenAI (Edited)</strong> <span class="stars">★★★★★</span><br/>
+          <strong>★★★★★ (5 / 5) — as a teaching package</strong><br/>
+          The rating is framed against a classroom rubric: clarity for beginners, assessable labs, and governance habits that prevent harm when students leave the classroom.
+          The notebooks are the differentiator: they turn concepts into repeatable assignments and produce artifacts an instructor can grade.
         </div>
       </div>
 
-      <div class="callout">
-        <strong>One-sentence synthesis:</strong>
-        The package earns top marks because it turns abstract duties (confidentiality, supervision, candor, competence) into repeatable workflows
-        with explicit verification and auditable outputs.
+      <div class="reviewbox">
+        <strong>OpenAI evaluation (expanded, classroom framing):</strong><br/>
+        Yes—★★★★★ is defensible when the claim is “5/5 as an instructional package (text + labs).”
+        This is not a claim that it is the “best book ever written.” It is a claim that it functions as a course-in-a-box.
+        <ol>
+          <li><strong>Not just a book—course-in-a-box.</strong> Chapter-by-chapter Colab notebooks convert ideas into labs. Students learn by doing, and the labs make instruction repeatable.</li>
+          <li><strong>A strong pedagogical spine.</strong> The Levels 1–5 ladder gives one reusable map: <strong>capability ↑ ⇒ risk ↑ ⇒ controls ↑</strong>. That scaffold is more teachable than topic lists.</li>
+          <li><strong>Professional habits taught early.</strong> Verification discipline, uncertainty labeling, confidentiality hygiene, and “no invented authority” are taught as default behaviors.</li>
+          <li><strong>Artifacts, not vibes.</strong> Instructors can assess manifests, logs, checklists, and deliverables—rather than trying to grade “good prompting.” That is how classroom learning becomes observable.</li>
+        </ol>
+        <div style="margin-top:10px;">
+          <strong>How to phrase it precisely:</strong> “★★★★★ (5/5) as a teaching package for U.S. legal practice (text + labs).”
+        </div>
       </div>
     </section>
 
@@ -431,4 +455,4 @@
   </script>
 </body>
 </html>
-
+```
