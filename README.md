@@ -61,3 +61,4 @@ This repository and book are **educational materials**. They are **not legal adv
 
 **Suggested citation**  
 Alejandro Reynoso, *Practical Legal Applications of Generative AI (AI LAW)*, companion notebooks repository, GitHub.
+
