@@ -1,4 +1,5 @@
-
+**Practical Legal Applications of Generative AI (AI LAW)**  
+Alejandro Reynoso — Chief Scientist, DEFI CAPITAL RESEARCH; External Lecturer, Judge Business School Cambridge
 
 **What this repository contains**  
 This repository supports the book **Practical Legal Applications of Generative AI**, an educational, governance-first guide for **U.S. legal practice**. It is designed to help practicing lawyers build a clear mental model of what generative AI can do today, where it fails, and how to use it safely with professional responsibility constraints.
