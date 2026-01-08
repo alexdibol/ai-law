@@ -38,7 +38,7 @@ To keep learning concrete, every level is demonstrated using the same four mini-
 
 This structure makes the progression visible: as capability increases, risk increases, and controls must scale accordingly. Each chapter ends with a **minimum standard checklist** that can be adopted immediately in real practice settings.
 
-**How to use the notebooks**  
+## **How to use the notebooks**  
 Each notebook is designed to be run in Google Colab and to generate audit-ready artifacts (manifests, logs, structured deliverables). Open a notebook in Colab by using the pattern below:
 
 Colab link format:  
@@ -51,14 +51,14 @@ Examples:
 - `notebooks/chapter_4.ipynb`  
 - `notebooks/chapter_5.ipynb`
 
-**Important note (read carefully)**  
+## **Important note (read carefully)**  
 This repository and book are **educational materials**. They are **not legal advice**. Human lawyer review is required for any reliance-bearing use. Confidentiality, privilege, competence, supervision, candor, and client communication obligations apply at every step. Do not paste sensitive client information into external model prompts; use redaction and “minimum necessary” inputs by default.
 
-**Repository structure**  
+## **Repository structure**  
 - `notebooks/` — Companion Colab notebooks (chapter_1 … chapter_5)  
 - `docs/` — Landing page (optional, for GitHub Pages)  
 - Releases — Versioned PDF book editions and optional bundles
 
-**Suggested citation**  
+## **Suggested citation**  
 Alejandro Reynoso, *Practical Legal Applications of Generative AI (AI LAW)*, companion notebooks repository, GitHub.
 
