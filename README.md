@@ -1,19 +1,19 @@
 # **Practical Legal Applications of Generative AI (AI LAW)**  
 Alejandro Reynoso — Chief Scientist, DEFI CAPITAL RESEARCH; External Lecturer, Judge Business School Cambridge
 
-##**What this repository contains**  
+## **What this repository contains**  
 This repository supports the book **Practical Legal Applications of Generative AI**, an educational, governance-first guide for **U.S. legal practice**. It is designed to help practicing lawyers build a clear mental model of what generative AI can do today, where it fails, and how to use it safely with professional responsibility constraints.
 
-Contents:
+## Contents:
 - **Book (PDF)**: published as a versioned GitHub Release (see the Releases section of this repository).  
 - **Companion notebooks (Colab-ready)**: `notebooks/chapter_1.ipynb`, `notebooks/chapter_2.ipynb`, `notebooks/chapter_3.ipynb`, `notebooks/chapter_4.ipynb`, `notebooks/chapter_5.ipynb`
 
-**Who this is for**  
+## **Who this is for**  
 - U.S.-based practicing lawyers and legal professionals  
 - Readers with minimal AI background who want practical workflows, not hype  
 - Teams building policies, templates, and controlled processes for AI-assisted legal work
 
-**The book’s core idea: a five-level maturity ladder**  
+## **The book’s core idea: a five-level maturity ladder**  
 This book treats generative AI not as “legal authority,” but as a tool whose usefulness depends on **disciplined workflows, verification, and accountability**. It presents a five-level maturity ladder that progresses from individual assistance to organization-grade operations:
 
 - **Level 1 — Chatbots**: supervised drafting and client communication support  
@@ -22,14 +22,14 @@ This book treats generative AI not as “legal authority,” but as a tool whose
 - **Level 4 — Innovators**: reusable assets such as playbooks, clause libraries, checklists, and adversarial tests  
 - **Level 5 — Organizations**: an end-to-end operating model where a team can routinely explain what was produced and how—redacted inputs, prompts/roles, risks flagged, verification tasks, and sign-off responsibility
 
-**What makes this “governance-first” (and why that matters in law)**  
+## **What makes this “governance-first” (and why that matters in law)**  
 The focus is professional defensibility. Each chapter emphasizes controls that make AI outputs safer to review and harder to misuse:
 - Strict separation of **generation vs verification**  
 - Explicit labeling of **facts provided vs assumptions vs open questions**  
 - Zero-tolerance posture toward **invented authority** (no fabricated citations, cases, statutes, or rules)  
 - Governance-native artifacts that make work replayable and auditable: **run manifests, prompt logs, risk logs, verification checklists, deliverables bundles, and sign-off records**
 
-**Recurring mini-cases used across all chapters**  
+## **Recurring mini-cases used across all chapters**  
 To keep learning concrete, every level is demonstrated using the same four mini-cases:
 - **Criminal**  
 - **Regulatory / Administrative**  
