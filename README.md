@@ -59,6 +59,31 @@ This repository and book are **educational materials**. They are **not legal adv
 - `docs/` — Landing page (optional, for GitHub Pages)  
 - Releases — Versioned PDF book editions and optional bundles
 
+## ⚖️ License
+
+This project is released under the **MIT License**.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+---
+
+## ⚠️ Disclaimer and Use of AI Tools
+
+This collection is provided for **educational and research purposes only**. It does not constitute investment advice, trading advice, or a recommendation to engage in any particular trading strategy or financial activity.
+
+Market behavior is uncertain, and any application of the ideas, code, or methodologies presented here is undertaken **entirely at the reader’s own risk**.
+
+Artificial intelligence tools may have been used to **assist** in aspects of editing, code generation, formatting, or drafting during the development of this collection.  
+However, **conceptual design, methodological choices, system architecture, editorial judgment, integration, and final responsibility** for the content, structure, and conclusions of the work remained **under direct human control** throughout.
+
+The author assumes full responsibility for the coordination, design, and construction of the collection as a whole.
+
+
+
 ## **Suggested citation**  
 Alejandro Reynoso, *Practical Legal Applications of Generative AI (AI LAW)*, companion notebooks repository, GitHub.
 
