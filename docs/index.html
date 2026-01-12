@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -215,6 +214,37 @@
       margin:14px 0;
     }
 
+    /* NEW: compact chapter chips */
+    .chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:14px;
+    }
+    .chip{
+      display:inline-block;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,0.10);
+      background:rgba(15,18,32,0.55);
+      color:var(--muted);
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:0.02em;
+      transition: transform 0.12s ease, border-color 0.12s ease, background 0.12s ease;
+    }
+    .chip:hover{
+      transform: translateY(-1px);
+      border-color: rgba(122,162,255,0.35);
+      background: rgba(20,24,54,0.86);
+      color:var(--text);
+      text-decoration:none;
+    }
+    .chip:focus{
+      outline:2px solid rgba(110,231,200,0.46);
+      outline-offset:3px;
+    }
+
     .footer{
       margin-top:80px;
       padding-top:24px;
@@ -279,6 +309,59 @@
       <div class="callout">
         <strong>Colab link pattern:</strong>
         <div class="mono">https://colab.research.google.com/github/alexdibol/ai-law/blob/main/notebooks/chapter_&lt;N&gt;.ipynb</div>
+      </div>
+    </section>
+
+    <!-- NEW SECTION: Chapter Decks (PDF) -->
+    <section class="section" id="decks">
+      <h2>Chapter Decks (PDF)</h2>
+      <p>
+        Each chapter has a lightweight slide deck (PDF) stored in the repository for quick review, classroom use, and offline reading.
+        If you update a deck, keep the filename stable so links remain permanent.
+      </p>
+
+      <div class="grid">
+        <!-- IMPORTANT: Replace href targets with your actual deck paths once uploaded -->
+        <a class="card linkcard" href="https://github.com/alexdibol/ai-law/blob/main/decks/ch01/ai-law-ch01-deck.pdf" target="_blank" rel="noopener">
+          <h3>Chapter 1 Deck</h3>
+          <p>Level 1 (Chatbots): supervised drafting, client communications, redaction hygiene.</p>
+          <div class="hint">Open PDF →</div>
+        </a>
+
+        <a class="card linkcard" href="https://github.com/alexdibol/ai-law/blob/main/decks/ch02/ai-law-ch02-deck.pdf" target="_blank" rel="noopener">
+          <h3>Chapter 2 Deck</h3>
+          <p>Level 2 (Reasoners): issue spotting, structured uncertainty, verification lists.</p>
+          <div class="hint">Open PDF →</div>
+        </a>
+
+        <a class="card linkcard" href="https://github.com/alexdibol/ai-law/blob/main/decks/ch03/ai-law-ch03-deck.pdf" target="_blank" rel="noopener">
+          <h3>Chapter 3 Deck</h3>
+          <p>Level 3 (Agents): multi-step workflows, human gates, role separation, logs.</p>
+          <div class="hint">Open PDF →</div>
+        </a>
+
+        <a class="card linkcard" href="https://github.com/alexdibol/ai-law/blob/main/decks/ch04/ai-law-ch04-deck.pdf" target="_blank" rel="noopener">
+          <h3>Chapter 4 Deck</h3>
+          <p>Level 4 (Innovators): reusable assets, adversarial tests, controlled releases.</p>
+          <div class="hint">Open PDF →</div>
+        </a>
+
+        <a class="card linkcard" href="https://github.com/alexdibol/ai-law/blob/main/decks/ch05/ai-law-ch05-deck.pdf" target="_blank" rel="noopener">
+          <h3>Chapter 5 Deck</h3>
+          <p>Level 5 (Organizations): intake → checks → workflow → QA → sign-off → archive.</p>
+          <div class="hint">Open PDF →</div>
+        </a>
+      </div>
+
+      <div class="callout">
+        <strong>Tip:</strong> If you prefer a compact layout, use the quick links below.
+        <div class="chips" aria-label="Deck quick links">
+          <a class="chip" href="https://github.com/alexdibol/ai-law/blob/main/decks/ch01/ai-law-ch01-deck.pdf" target="_blank" rel="noopener">Deck — Ch 1</a>
+          <a class="chip" href="https://github.com/alexdibol/ai-law/blob/main/decks/ch02/ai-law-ch02-deck.pdf" target="_blank" rel="noopener">Deck — Ch 2</a>
+          <a class="chip" href="https://github.com/alexdibol/ai-law/blob/main/decks/ch03/ai-law-ch03-deck.pdf" target="_blank" rel="noopener">Deck — Ch 3</a>
+          <a class="chip" href="https://github.com/alexdibol/ai-law/blob/main/decks/ch04/ai-law-ch04-deck.pdf" target="_blank" rel="noopener">Deck — Ch 4</a>
+          <a class="chip" href="https://github.com/alexdibol/ai-law/blob/main/decks/ch05/ai-law-ch05-deck.pdf" target="_blank" rel="noopener">Deck — Ch 5</a>
+        </div>
       </div>
     </section>
 
@@ -451,5 +534,3 @@
   </script>
 </body>
 </html>
-
-
