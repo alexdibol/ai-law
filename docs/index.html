@@ -78,32 +78,6 @@
       color:var(--muted);
       font-size:16px;
     }
-    .meta{
-      display:grid;
-      gap:6px;
-      color:var(--muted);
-      font-size:14px;
-      margin:16px 0 0;
-    }
-    .meta strong{color:var(--text);}
-
-    .badges{
-      margin-top:14px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-    }
-    .badge{
-      display:inline-block;
-      padding:6px 10px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,0.10);
-      background:rgba(15,18,32,0.55);
-      color:var(--muted);
-      font-size:12px;
-      letter-spacing:0.02em;
-      font-weight:700;
-    }
 
     .section{margin-top:56px;}
     .section h2{
@@ -214,7 +188,6 @@
       margin:14px 0;
     }
 
-    /* Compact “chips” */
     .chips{
       display:flex;
       flex-wrap:wrap;
@@ -270,19 +243,10 @@
         alongside risk, and how controls must scale to preserve professional responsibility.
       </p>
 
-      <div class="meta">
-        <div><strong>Author:</strong> Alejandro Reynoso</div>
-        <div><strong>Affiliation:</strong> Chief Scientist, DEFI CAPITAL RESEARCH; External Lecturer, Judge Business School Cambridge</div>
-        <div><strong>Repository:</strong> <a href="https://github.com/alexdibol/ai-law" target="_blank" rel="noopener">github.com/alexdibol/ai-law</a></div>
-      </div>
-
-      <div class="badges" aria-label="Key ideas">
-        <span class="badge">No invented authority</span>
-        <span class="badge">Facts vs assumptions</span>
-        <span class="badge">Not verified by default</span>
-        <span class="badge">Human review required</span>
-        <span class="badge">Audit artifacts</span>
-      </div>
+      <!-- REMOVED per your request:
+           - Author/Affiliation/Repository block
+           - Badge row ("No invented authority", etc.)
+      -->
     </section>
 
     <section class="section" id="downloads">
@@ -306,23 +270,16 @@
         </a>
       </div>
 
-      <div class="callout">
-        <strong>Colab link pattern:</strong>
-        <div class="mono">https://colab.research.google.com/github/alexdibol/ai-law/blob/main/notebooks/chapter_&lt;N&gt;.ipynb</div>
-      </div>
+      <!-- REMOVED per your request:
+           - Colab link pattern callout box
+      -->
     </section>
 
-    <!-- =========================================================
-         Chapter Decks (PDF)
-         IMPORTANT: These links match your repo layout:
-           /decks/ch01/deck_chapter_1.pdf
-           /decks/ch02/deck_chapter_2.pdf
-           ...
-         ========================================================= -->
+    <!-- Chapter Decks (PDF) — repo layout: /decks/ch0N/deck_chapter_N.pdf -->
     <section class="section" id="decks">
       <h2>Chapter Decks (PDF)</h2>
       <p>
-        Slide decks (PDF) for quick chapter review and classroom use. Stored in the repository under <span class="mono">/decks/ch0N/</span>.
+        Slide decks (PDF) for quick chapter review and classroom use.
       </p>
 
       <div class="grid">
@@ -410,7 +367,7 @@
 
       <div class="callout">
         <strong>Important:</strong> Notebooks are educational. Do not paste confidential client information into external model prompts.
-        Use redaction and “minimum necessary” inputs by default.
+        Use redaction/anonymization and “minimum necessary” inputs by default.
       </div>
     </section>
 
